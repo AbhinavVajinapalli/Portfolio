@@ -402,10 +402,18 @@
             background: linear-gradient(145deg, rgba(20, 10, 36, 0.95), rgba(12, 6, 24, 0.9));
         }
 
+        .education-timeline {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
         .education-timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 2rem;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -415,11 +423,11 @@
         .education-item {
             position: relative;
             padding: 1.5rem;
-            background: rgba(30, 17, 49, 0.92);
+            background: #f8f8f8;
             border-radius: 10px;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-            margin-left: 1rem;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+            margin-left: 3rem;
             transition: transform 0.3s ease;
             border: 1px solid rgba(156, 77, 255, 0.35);
         }
@@ -441,24 +449,35 @@
         }
 
         .education-item h3 {
-            color: var(--primary-color);
+            color: #0a0a0f;
             margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.4rem;
         }
 
         .education-item .institution {
             font-weight: 600;
-            color: var(--text-color);
+            color: #0a0a0f;
+            font-size: 1.1rem;
         }
 
         .education-item .period {
-            color: var(--gray);
-            font-size: 0.9rem;
+            color: #333;
+            font-size: 0.95rem;
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .education-item .grade {
             font-weight: 600;
-            color: var(--accent);
+            color: var(--primary-color);
+        }
+
+        .education-item p {
+            color: #0a0a0f;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.7;
         }
 
         /* Experience Section */
