@@ -340,7 +340,38 @@
 
         /* About Section */
         #about {
-            background: linear-gradient(145deg, rgba(26, 11, 46, 0.85), rgba(14, 7, 25, 0.95));
+            background: linear-gradient(135deg, #1a0b2e 0%, #2d1447 25%, #1f0d35 50%, #160921 75%, #0f0515 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        #about::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
         }
 
         .about-content {
@@ -349,6 +380,8 @@
             padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
         }
 
         .about-text {
@@ -402,12 +435,46 @@
         }
 
         /* Education Section */
+        #education {
+            background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 25%, #2d1447 50%, #1f0d35 75%, #16092a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #education::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: -8%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        #education::after {
+            content: '';
+            position: absolute;
+            bottom: 5%;
+            right: -5%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 18s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
         .education-timeline {
             position: relative;
             padding-left: 2rem;
+            z-index: 1;
         }
-
-        #education {
             background: linear-gradient(145deg, rgba(20, 10, 36, 0.95), rgba(12, 6, 24, 0.9));
         }
 
@@ -491,12 +558,46 @@
 
         /* Experience Section */
         #experience {
-            background: linear-gradient(145deg, rgba(16, 8, 28, 0.95), rgba(24, 12, 40, 0.9));
+            background: linear-gradient(135deg, #1f0d35 0%, #2d1447 30%, #1a0b2e 60%, #0f0515 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #experience::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: rotate 30s linear infinite;
+        }
+
+        #experience::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 10%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.14) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: rotate 25s linear infinite reverse;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.05); }
+            100% { transform: rotate(360deg) scale(1); }
         }
 
         .experience-grid {
             display: grid;
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .experience-card {
@@ -597,11 +698,43 @@
         }
 
         /* Skills Section */
+        #skills {
+            background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 20%, #2d1447 45%, #1f0d35 70%, #160921 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #skills::before {
+            content: '';
+            position: absolute;
+            top: 5%;
+            left: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.16) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 22s ease-in-out infinite;
+        }
+
+        #skills::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            right: -8%;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.13) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 28s ease-in-out infinite reverse;
+        }
+
         .skills-grid {
             display: flex;
             flex-direction: column;
             gap: 2rem;
             width: 100%;
+            position: relative;
+            z-index: 1;
         }
 
         .skill-category {
@@ -665,13 +798,41 @@
 
         /* Projects Section */
         #projects {
-            background: linear-gradient(145deg, rgba(18, 9, 32, 0.95), rgba(26, 13, 44, 0.9));
+            background: linear-gradient(135deg, #160921 0%, #2d1447 25%, #1a0b2e 50%, #1f0d35 75%, #0f0515 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #projects::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: 5%;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.17) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 24s ease-in-out infinite;
+        }
+
+        #projects::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            right: 10%;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.14) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 28s ease-in-out infinite reverse;
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .project-card {
@@ -717,9 +878,41 @@
         }
 
         /* Achievements Section */
+        #achievements {
+            background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 20%, #2d1447 50%, #1f0d35 80%, #160921 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #achievements::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            right: -12%;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 26s ease-in-out infinite;
+        }
+
+        #achievements::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: 5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 30s ease-in-out infinite reverse;
+        }
+
         .achievements-grid {
             display: grid;
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .achievement-card {
@@ -764,13 +957,41 @@
 
         /* Certifications Section */
         #certifications {
-            background: linear-gradient(145deg, rgba(18, 10, 34, 0.95), rgba(14, 6, 28, 0.9));
+            background: linear-gradient(135deg, #160921 0%, #2d1447 25%, #1a0b2e 50%, #1f0d35 75%, #0f0515 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #certifications::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(155, 77, 255, 0.16) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: rotate 32s linear infinite;
+        }
+
+        #certifications::after {
+            content: '';
+            position: absolute;
+            bottom: 5%;
+            right: -5%;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(107, 45, 143, 0.13) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: rotate 28s linear infinite reverse;
         }
 
         .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .certification-card {
