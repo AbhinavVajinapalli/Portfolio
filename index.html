@@ -308,13 +308,16 @@
             text-align: center;
             font-size: 2.5rem;
             margin: 0 auto 3rem;
-            color: #0a0a0f;
+            color: #fdfbff;
             position: relative;
             padding: 0.75rem 1.5rem 1rem;
             display: inline-block;
-            background: #ffffff;
+            background: linear-gradient(135deg, #2a1545, #1a0f2f);
             border-radius: 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            text-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
         }
 
         /* Experience heading only */
@@ -342,31 +345,35 @@
         #about {
             background: linear-gradient(135deg, #1a0b2e 0%, #2d1447 25%, #1f0d35 50%, #160921 75%, #0f0515 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #about::before {
             content: '';
-            position: absolute;
-            top: -50%;
+            position: fixed;
+            top: 600px;
             right: -10%;
             width: 500px;
             height: 500px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.2) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #about::after {
             content: '';
-            position: absolute;
-            bottom: -30%;
+            position: fixed;
+            bottom: -300px;
             left: -5%;
             width: 400px;
             height: 400px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 25s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         @keyframes float {
@@ -376,12 +383,13 @@
 
         .about-content {
             display: block;
-            background: #ffffff;
+            background: rgba(30, 17, 49, 0.92);
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
             position: relative;
             z-index: 2;
+            border: 1px solid rgba(156, 77, 255, 0.3);
         }
 
         .about-text {
@@ -391,13 +399,13 @@
         .about-text h3 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: #0a0a0f;
+            color: #fdfbff;
             font-weight: 700;
         }
 
         .about-text p {
             margin-bottom: 1.5rem;
-            color: #0a0a0f;
+            color: #e7e3ff;
             line-height: 1.9;
             font-size: 1.15rem;
             font-weight: 600;
@@ -438,31 +446,35 @@
         #education {
             background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 25%, #2d1447 50%, #1f0d35 75%, #16092a 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #education::before {
             content: '';
-            position: absolute;
-            top: 10%;
+            position: fixed;
+            top: 1200px;
             left: -8%;
             width: 300px;
             height: 300px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 15s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #education::after {
             content: '';
-            position: absolute;
-            bottom: 5%;
+            position: fixed;
+            bottom: -700px;
             right: -5%;
             width: 350px;
             height: 350px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.12) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 18s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         @keyframes pulse {
@@ -472,18 +484,13 @@
 
         .education-timeline {
             position: relative;
-            padding-left: 2rem;
+            padding-left: 3rem;
             z-index: 1;
-        }
-            background: linear-gradient(145deg, rgba(20, 10, 36, 0.95), rgba(12, 6, 24, 0.9));
-        }
-
-        .education-timeline {
-            background: #ffffff;
+            background: rgba(30, 17, 49, 0.92);
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-            position: relative;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(156, 77, 255, 0.3);
         }
 
         .education-timeline::before {
@@ -499,10 +506,10 @@
         .education-item {
             position: relative;
             padding: 1.5rem;
-            background: #f8f8f8;
+            background: rgba(50, 30, 70, 0.7);
             border-radius: 10px;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
             margin-left: 3rem;
             transition: transform 0.3s ease;
             border: 1px solid rgba(156, 77, 255, 0.35);
@@ -525,7 +532,7 @@
         }
 
         .education-item h3 {
-            color: #0a0a0f;
+            color: #9c4dff;
             margin-bottom: 0.5rem;
             font-weight: 700;
             font-size: 1.4rem;
@@ -533,12 +540,12 @@
 
         .education-item .institution {
             font-weight: 600;
-            color: #0a0a0f;
+            color: #fdfbff;
             font-size: 1.1rem;
         }
 
         .education-item .period {
-            color: #333;
+            color: #b5b0d0;
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
             font-weight: 500;
@@ -546,11 +553,11 @@
 
         .education-item .grade {
             font-weight: 600;
-            color: var(--primary-color);
+            color: #ffb347;
         }
 
         .education-item p {
-            color: #0a0a0f;
+            color: #e7e3ff;
             font-size: 1rem;
             font-weight: 500;
             line-height: 1.7;
@@ -560,31 +567,35 @@
         #experience {
             background: linear-gradient(135deg, #1f0d35 0%, #2d1447 30%, #1a0b2e 60%, #0f0515 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #experience::before {
             content: '';
-            position: absolute;
-            top: -40%;
+            position: fixed;
+            top: 1800px;
             right: -15%;
             width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.18) 0%, transparent 70%);
             border-radius: 50%;
             animation: rotate 30s linear infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #experience::after {
             content: '';
-            position: absolute;
-            bottom: -20%;
+            position: fixed;
+            bottom: -1100px;
             left: 10%;
             width: 350px;
             height: 350px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.14) 0%, transparent 70%);
             border-radius: 50%;
             animation: rotate 25s linear infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         @keyframes rotate {
@@ -701,31 +712,35 @@
         #skills {
             background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 20%, #2d1447 45%, #1f0d35 70%, #160921 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #skills::before {
             content: '';
-            position: absolute;
-            top: 5%;
+            position: fixed;
+            top: 2400px;
             left: -10%;
             width: 450px;
             height: 450px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.16) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 22s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #skills::after {
             content: '';
-            position: absolute;
-            bottom: 10%;
+            position: fixed;
+            bottom: -1500px;
             right: -8%;
             width: 380px;
             height: 380px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.13) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 28s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .skills-grid {
@@ -738,10 +753,10 @@
         }
 
         .skill-category {
-            background: #ffffff;
+            background: rgba(30, 17, 49, 0.92);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease;
             border: 1px solid rgba(156, 77, 255, 0.35);
             backdrop-filter: blur(6px);
@@ -752,7 +767,7 @@
         }
 
         .skill-category h3 {
-            color: #0b0b0f;
+            color: #fdfbff;
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
             text-align: center;
@@ -800,31 +815,35 @@
         #projects {
             background: linear-gradient(135deg, #160921 0%, #2d1447 25%, #1a0b2e 50%, #1f0d35 75%, #0f0515 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #projects::before {
             content: '';
-            position: absolute;
-            top: -30%;
+            position: fixed;
+            top: 3000px;
             left: 5%;
             width: 520px;
             height: 520px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.17) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 24s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #projects::after {
             content: '';
-            position: absolute;
-            bottom: -15%;
+            position: fixed;
+            bottom: -2000px;
             right: 10%;
             width: 420px;
             height: 420px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.14) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 28s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .projects-grid {
@@ -881,31 +900,35 @@
         #achievements {
             background: linear-gradient(135deg, #0f0515 0%, #1a0b2e 20%, #2d1447 50%, #1f0d35 80%, #160921 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #achievements::before {
             content: '';
-            position: absolute;
-            top: 15%;
+            position: fixed;
+            top: 3600px;
             right: -12%;
             width: 480px;
             height: 480px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 26s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #achievements::after {
             content: '';
-            position: absolute;
-            bottom: -10%;
+            position: fixed;
+            bottom: -2500px;
             left: 5%;
             width: 400px;
             height: 400px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.12) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 30s ease-in-out infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .achievements-grid {
@@ -959,31 +982,35 @@
         #certifications {
             background: linear-gradient(135deg, #160921 0%, #2d1447 25%, #1a0b2e 50%, #1f0d35 75%, #0f0515 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         #certifications::before {
             content: '';
-            position: absolute;
-            top: 10%;
+            position: fixed;
+            top: 4200px;
             left: -10%;
             width: 500px;
             height: 500px;
             background: radial-gradient(circle, rgba(155, 77, 255, 0.16) 0%, transparent 70%);
             border-radius: 50%;
             animation: rotate 32s linear infinite;
+            pointer-events: none;
+            z-index: 0;
         }
 
         #certifications::after {
             content: '';
-            position: absolute;
-            bottom: 5%;
+            position: fixed;
+            bottom: -3000px;
             right: -5%;
             width: 380px;
             height: 380px;
             background: radial-gradient(circle, rgba(107, 45, 143, 0.13) 0%, transparent 70%);
             border-radius: 50%;
             animation: rotate 28s linear infinite reverse;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .certifications-grid {
@@ -1243,7 +1270,7 @@
                 <div class="about-text">
                     <h3>Hi, I'm Abhinav Vajinapalli</h3>
                     <p>I'm a passionate Computer Science & AI student at SR University with a strong foundation in software development, artificial intelligence, and cloud technologies. I love building innovative solutions that solve real-world problems.</p>
-                    <p>My journey in technology has been driven by curiosity and a desire to make a positive impact. I specialize in AI/ML, blockchain technology, and full-stack development, with hands-on experience in building scalable applications.</p>
+                    <p>My journey in technology has been driven by curiosity and a desire to make a positive impact. I specialize in AI/ML and software development with hands-on experience in building scalable applications.</p>
                     <p>I'm actively seeking opportunities to apply and enhance my technical skills in software development, AI, and emerging technologies.</p>
                 </div>
             </div>
@@ -1509,7 +1536,7 @@
                     </div>
                     <div class="contact-item">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone" width="22" height="22">
-                        <a href="tel:+919876543210">+91 98765 43210</a>
+                        <a href="tel:+919490476031">+91 9490476031</a>
                     </div>
                     <div class="contact-item">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg" alt="Location" width="16" height="16">
@@ -1520,7 +1547,7 @@
                     <a href="https://www.linkedin.com/in/abhinav-vajinapalli" class="social-link" target="_blank" title="LinkedIn">
                         <img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn" width="26" height="26">
                     </a>
-                    <a href="https://github.com/abhinav-vajinapalli" class="social-link" target="_blank" title="GitHub">
+                    <a href="https://github.com/AbhinavVajinapalli" class="social-link" target="_blank" title="GitHub">
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="26" height="26">
                     </a>
                     <a href="mailto:vajinapalli.abhinav@gmail.com" class="social-link" title="Email">
