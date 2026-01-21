@@ -1687,30 +1687,55 @@
             tag.style.animationDelay = `${index * 0.1}s`;
         });
 
-        // Sliding subtitle effect
+        // Typing + Glowing Subtitle Effect - More Amazing Animation
         const subtitles = [
             'Software Developer',
-            'ML Engineer'
+            'ML Engineer',
+            'AI Engineer',
+            'Data Analytics',
+            'Feature Engineering'
         ];
         let currentIndex = 0;
         const subtitleElement = document.getElementById('subtitleText');
+        const colors = ['#9c4dff', '#ff6b9d', '#00d4ff', '#ffd700', '#00ff88'];
 
-        function changeSubtitle() {
+        function typeWriter(text, colorIndex) {
+            subtitleElement.textContent = '';
+            subtitleElement.style.color = colors[colorIndex];
+            let charIndex = 0;
+
+            const typeInterval = setInterval(() => {
+                if (charIndex < text.length) {
+                    subtitleElement.textContent += text[charIndex];
+                    subtitleElement.style.textShadow = `0 0 10px ${colors[colorIndex]}, 0 0 20px rgba(156, 77, 255, 0.5)`;
+                    charIndex++;
+                } else {
+                    clearInterval(typeInterval);
+                }
+            }, 80);
+        }
+
+        function changeSubtitleTyping() {
+            // Fade out with scale down
             subtitleElement.style.opacity = '0';
-            subtitleElement.style.transform = 'translateY(-10px)';
+            subtitleElement.style.transform = 'scale(0.8)';
             
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % subtitles.length;
-                subtitleElement.textContent = subtitles[currentIndex];
+                // Fade in with scale up and typing effect
                 subtitleElement.style.opacity = '1';
-                subtitleElement.style.transform = 'translateY(0)';
-            }, 500);
+                subtitleElement.style.transform = 'scale(1)';
+                typeWriter(subtitles[currentIndex], currentIndex);
+            }, 600);
         }
 
-        // Start sliding effect after page load
+        // Start typing effect after page load
         window.addEventListener('load', () => {
-            subtitleElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            setInterval(changeSubtitle, 3000);
+            subtitleElement.style.transition = 'opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            subtitleElement.style.fontWeight = '700';
+            subtitleElement.style.letterSpacing = '1px';
+            typeWriter(subtitles[0], 0);
+            setInterval(changeSubtitleTyping, 4000);
         });
 
         // Add hover effects to cards
